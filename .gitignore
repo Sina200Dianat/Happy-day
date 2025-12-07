@@ -1,23 +1,45 @@
+# Logs & system files
 *.log
 .DS_Store
+Thumbs.db
+
+# Environment files
 .env
 .env.backup
 .env.production
-.phpactor.json
-.phpunit.result.cache
+
+# IDE & Editor configs
 /.fleet
 /.idea
 /.nova
 /.phpunit.cache
 /.vscode
 /.zed
-/auth.json
+.phpactor.json
+.phpunit.result.cache
+
+# NPM & vendor directories
 /node_modules
+/vendor
+
+# Laravel specific ignored paths
 /public/build
 /public/hot
+
+# Ignore entire storage by default
+/storage/
+
+# BUT allow storage/app to be tracked
+!storage/app/
+!storage/app/**
+
+# Still ignore sensitive or unnecessary files inside storage
 /storage/*.key
 /storage/pail
-/vendor
+
+# Homestead
 Homestead.json
 Homestead.yaml
-Thumbs.db
+
+# Composer authentication file
+/auth.json
